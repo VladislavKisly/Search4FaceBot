@@ -41,7 +41,7 @@ class SearchForFaceClient:
         res = self.__make_request('POST', params)
         return res
 
-    def search_face(self, image: str, face: list, source: str, results: int, lang="ru", hidden=False):
+    def search_face(self, image: str, face: dict, source: str, results: int, hidden: bool, lang: str = "ru"):
         params = {
             "jsonrpc": "2.0",
             "method": "searchFace",
